@@ -17,14 +17,15 @@ enabling scientific analysis of Coal and Open-pit surface mining impacts on Amer
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pycoal-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pycoal-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pycoal-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pycoal-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pycoal-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pycoal-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/pycoal-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/pycoal-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycoal/badges/version.svg)](https://anaconda.org/conda-forge/pycoal)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pycoal/badges/downloads.svg)](https://anaconda.org/conda-forge/pycoal)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pycoal-green.svg)](https://anaconda.org/conda-forge/pycoal) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pycoal.svg)](https://anaconda.org/conda-forge/pycoal) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pycoal.svg)](https://anaconda.org/conda-forge/pycoal) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pycoal.svg)](https://anaconda.org/conda-forge/pycoal) |
 
 Installing pycoal
 =================
@@ -69,6 +70,7 @@ To manage the continuous integration and simplify feedstock maintenance
 Using the ``conda-forge.yml`` within this repository, it is possible to re-render all of
 this feedstock's supporting files (e.g. the CI configuration files) with ``conda smithy rerender``.
 
+For more information please check the [conda-forge documentation](https://conda-forge.org/docs/).
 
 Terminology
 ===========
