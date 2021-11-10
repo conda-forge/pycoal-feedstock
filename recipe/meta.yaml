@@ -1,36 +1,40 @@
 {% set name = "pycoal" %}
 {% set version = "0.5.2" %}
-{% set sha256 = "330f88043f29b027e49daa31a749af6ed23deb18059ac8ba24949a01d4dc8a6f" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pycoal-{{ version }}.tar.gz
+  sha256: 330f88043f29b027e49daa31a749af6ed23deb18059ac8ba24949a01d4dc8a6f
 
 build:
   number: 1003
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
-    - setuptools
+    - pip
+    - python >=3.6
   run:
-    - python
     - numpy
+    - python >=3.6
     - spectral
 
 test:
   imports:
     - pycoal
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/capstone-coal/pycoal/
-  license: GPLv2
+  license: GPL-2.0-or-later
   license_family: GPL
   license_file: LICENSE
   summary: 'Python toolkit for characterizing Coal and Open-pit surface mining impacts on American Lands'
